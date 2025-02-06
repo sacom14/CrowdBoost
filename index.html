@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salva el Bosque Tropical - Campaña de Micromecenazgo</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <h1>CrowdBoost</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre el Viaje</a></li>
+                <li><a href="#progress">Progreso</a></li>
+                <li><a href="#donate">Apoyar</a></li>
+                <li><a href="#testimonials">Opiniones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section -->
+        <section id="hero">
+            <h2>Ayúdanos a Hacer Realidad Nuestro Viaje de Final de Curso</h2>
+            <p>Tu apoyo nos permitirá vivir una experiencia inolvidable y cerrar nuestra etapa escolar con broche de
+                oro.</p>
+            <a href="#donate" class="cta-button">¡Apoya Ahora!</a>
+        </section>
+
+        <!--Project details -->
+        <section id="about">
+            <h2>Sobre Nuestro Viaje</h2>
+            <p>Somos la clase de 2º de Bachillerato del IES Ejemplo y queremos realizar un viaje educativo y cultural a
+                Roma como cierre de nuestra etapa escolar.</p>
+            <ul>
+                <li>Visitar monumentos históricos y museos</li>
+                <li>Aprender sobre la cultura italiana</li>
+                <li>Fortalecer lazos entre compañeros</li>
+                <li>Duración: 7 días en junio de 2025</li>
+                <li>Fecha límite: 20 de mayo de 2025</li>
+            </ul>
+        </section>
+
+        <!-- Progress -->
+        <section id="progress">
+            <h2>Progreso de la Campaña</h2>
+            <progress id="funding-progress" value="3000" max="5000"></progress>
+            <p>€3,000 recaudados de €5,000</p>
+        </section>
+
+        <!-- Donate options -->
+        <aside id="donate">
+            <h2>Apoya Nuestro Viaje</h2>
+            <form action="/procesar-apoyo" method="post">
+                <label for="amount">Cantidad a aportar:</label>
+                <input type="number" id="amount" name="amount" min="5" step="5" required>
+                <select id="reward" name="reward">
+                    <option value="none">Sin recompensa</option>
+                    <option value="postcard">Postal desde Roma (€20+)</option>
+                    <option value="souvenir">Souvenir del viaje (€50+)</option>
+                    <option value="video">Video personalizado del viaje (€100+)</option>
+                </select>
+                <button type="submit">Apoyar</button>
+            </form>
+        </aside>
+
+        <!-- Testimonials -->
+        <section id="testimonials">
+            <h2>Lo que Dicen Sobre Nuestro Proyecto</h2>
+            <blockquote>
+                <p>"Este viaje será una oportunidad única para que nuestros estudiantes apliquen lo aprendido en clase y
+                    experimenten la historia y cultura de primera mano."</p>
+                <cite>- Profa. María López, Tutora de 2º de Bachillerato</cite>
+            </blockquote>
+            <blockquote>
+                <p>"Estamos muy ilusionados con este viaje. Será una experiencia que recordaremos toda la vida y nos
+                    ayudará a cerrar esta etapa de manera especial."</p>
+                <cite>- Carlos Rodríguez, Estudiante</cite>
+            </blockquote>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CrowdBoost - Campaña Viaje Final de Curso. Todos los derechos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="/privacy">Política de Privacidad</a></li>
+                <li><a href="/terms">Términos y Condiciones</a></li>
+                <li><a href="/contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

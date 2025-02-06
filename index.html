@@ -1,98 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salva el Bosque Tropical - Campaña de Micromecenazgo</title>
+    <title>CrowdBoost - Viaje de Final de Curso</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <header>
-        <h1>CrowdBoost</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre el Viaje</a></li>
-                <li><a href="#progress">Progreso</a></li>
-                <li><a href="#donate">Apoyar</a></li>
-                <li><a href="#testimonials">Opiniones</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container header-content">
+            <h1 class="logo">CrowdBoost</h1>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">Sobre el Viaje</a></li>
+                    <li><a href="#progress" class="nav-link">Progreso</a></li>
+                    <li><a href="#donate" class="nav-link">Apoyar</a></li>
+                    <li><a href="#testimonials" class="nav-link">Opiniones</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- Hero section -->
-        <section id="hero">
-            <h2>Ayúdanos a Hacer Realidad Nuestro Viaje de Final de Curso</h2>
-            <p>Tu apoyo nos permitirá vivir una experiencia inolvidable y cerrar nuestra etapa escolar con broche de
-                oro.</p>
-            <a href="#donate" class="cta-button">¡Apoya Ahora!</a>
-        </section>
+    <main class="main-content">
+        <div class="container">
+            <section id="hero" class="hero">
+                <h2 class="hero-title">Ayúdanos a Hacer Realidad Nuestro Viaje de Final de Curso</h2>
+                <p class="hero-text">Tu apoyo nos permitirá vivir una experiencia inolvidable y cerrar nuestra etapa
+                    escolar con broche de oro.</p>
+                <a href="#donate" class="cta-button">¡Apoya Ahora!</a>
+            </section>
 
-        <!--Project details -->
-        <section id="about">
-            <h2>Sobre Nuestro Viaje</h2>
-            <p>Somos la clase de 2º de Bachillerato del IES Ejemplo y queremos realizar un viaje educativo y cultural a
-                Roma como cierre de nuestra etapa escolar.</p>
-            <ul>
-                <li>Visitar monumentos históricos y museos</li>
-                <li>Aprender sobre la cultura italiana</li>
-                <li>Fortalecer lazos entre compañeros</li>
-                <li>Duración: 7 días en junio de 2025</li>
-                <li>Fecha límite: 20 de mayo de 2025</li>
-            </ul>
-        </section>
+            <div class="content-wrapper">
+                <div class="main-sections">
+                    <section id="about" class="section">
+                        <h2 class="section-title">Sobre Nuestro Viaje</h2>
+                        <p>Somos la clase de 2º de Bachillerato del IES Ejemplo y queremos realizar un viaje educativo y
+                            cultural a Roma como cierre de nuestra etapa escolar.</p>
+                        <ul class="trip-details">
+                            <li>Visitar monumentos históricos y museos</li>
+                            <li>Aprender sobre la cultura italiana</li>
+                            <li>Fortalecer lazos entre compañeros</li>
+                            <li>Duración: 7 días en junio de 2025</li>
+                            <li>Fecha límite: 20 de mayo de 2025</li>
+                        </ul>
+                    </section>
 
-        <!-- Progress -->
-        <section id="progress">
-            <h2>Progreso de la Campaña</h2>
-            <progress id="funding-progress" value="3000" max="5000"></progress>
-            <p>€3,000 recaudados de €5,000</p>
-        </section>
+                    <section id="progress" class="section">
+                        <h2 class="section-title">Progreso de la Campaña</h2>
+                        <div class="progress-bar">
+                            <progress id="funding-progress" value="3000" max="5000"></progress>
+                            <p class="progress-text">€3,000 recaudados de €5,000</p>
+                        </div>
+                    </section>
 
-        <!-- Donate options -->
-        <aside id="donate">
-            <h2>Apoya Nuestro Viaje</h2>
-            <form action="/procesar-apoyo" method="post">
-                <label for="amount">Cantidad a aportar:</label>
-                <input type="number" id="amount" name="amount" min="5" step="5" required>
-                <select id="reward" name="reward">
-                    <option value="none">Sin recompensa</option>
-                    <option value="postcard">Postal desde Roma (€20+)</option>
-                    <option value="souvenir">Souvenir del viaje (€50+)</option>
-                    <option value="video">Video personalizado del viaje (€100+)</option>
-                </select>
-                <button type="submit">Apoyar</button>
-            </form>
-        </aside>
+                    <section id="testimonials" class="section">
+                        <h2 class="section-title">Lo que Dicen Sobre Nuestro Proyecto</h2>
+                        <div class="testimonials-wrapper">
+                            <blockquote class="testimonial">
+                                <p>"Este viaje será una oportunidad única para que nuestros estudiantes apliquen lo
+                                    aprendido en clase y experimenten la historia y cultura de primera mano."</p>
+                                <cite>- Profa. María López, Tutora de 2º de Bachillerato</cite>
+                            </blockquote>
+                            <blockquote class="testimonial">
+                                <p>"Estamos muy ilusionados con este viaje. Será una experiencia que recordaremos toda
+                                    la vida y nos ayudará a cerrar esta etapa de manera especial."</p>
+                                <cite>- Carlos Rodríguez, Estudiante</cite>
+                            </blockquote>
+                        </div>
+                    </section>
+                </div>
 
-        <!-- Testimonials -->
-        <section id="testimonials">
-            <h2>Lo que Dicen Sobre Nuestro Proyecto</h2>
-            <blockquote>
-                <p>"Este viaje será una oportunidad única para que nuestros estudiantes apliquen lo aprendido en clase y
-                    experimenten la historia y cultura de primera mano."</p>
-                <cite>- Profa. María López, Tutora de 2º de Bachillerato</cite>
-            </blockquote>
-            <blockquote>
-                <p>"Estamos muy ilusionados con este viaje. Será una experiencia que recordaremos toda la vida y nos
-                    ayudará a cerrar esta etapa de manera especial."</p>
-                <cite>- Carlos Rodríguez, Estudiante</cite>
-            </blockquote>
-        </section>
+                <aside id="donate" class="donate-sidebar">
+                    <h2 class="section-title">Apoya Nuestro Viaje</h2>
+                    <form action="/procesar-apoyo" method="post" class="donate-form">
+                        <label for="amount">Cantidad a aportar:</label>
+                        <input type="number" id="amount" name="amount" min="5" step="5" required>
+                        <label for="reward">Elige tu recompensa:</label>
+                        <select id="reward" name="reward">
+                            <option value="none">Sin recompensa</option>
+                            <option value="postcard">Postal desde Roma (€20+)</option>
+                            <option value="souvenir">Souvenir del viaje (€50+)</option>
+                            <option value="video">Video personalizado del viaje (€100+)</option>
+                        </select>
+                        <button type="submit" class="donate-button">Apoyar</button>
+                    </form>
+                </aside>
+            </div>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 CrowdBoost - Campaña Viaje Final de Curso. Todos los derechos reservados.</p>
-        <nav>
-            <ul>
-                <li><a href="/privacy">Política de Privacidad</a></li>
-                <li><a href="/terms">Términos y Condiciones</a></li>
-                <li><a href="/contact">Contacto</a></li>
-            </ul>
-        </nav>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 CrowdBoost - Campaña Viaje Final de Curso. Todos los derechos reservados.</p>
+            <nav class="footer-nav">
+                <ul class="footer-nav-list">
+                    <li><a href="/privacy" class="footer-nav-link">Política de Privacidad</a></li>
+                    <li><a href="/terms" class="footer-nav-link">Términos y Condiciones</a></li>
+                    <li><a href="/contact" class="footer-nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </footer>
 </body>
 

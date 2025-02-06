@@ -102,3 +102,44 @@ flowchart TD
 - 🟡 Amarillo: Subsecciones
 - 🟣 Púrpura: Contenidos
 - 🔵 Azul: Características específicas
+
+
+## Instrucciones de Instalación
+
+### Requisitos Previos
+Asegúrate de tener instalado lo siguiente en tu sistema:
+- Un navegador web moderno (Chrome, Firefox, Edge, etc.)
+- Git (para clonar el repositorio)
+
+### Clonar el Repositorio
+Primero, clona el repositorio de GitHub en tu máquina local. Abre una terminal y ejecuta el siguiente comando:
+```bash
+git clone https://github.com/tu-usuario/crowdboost.git
+```
+
+### Navegar al Directorio del Proyecto
+Cambia al directorio del proyecto clonado:
+```bash
+cd crowdboost
+```
+
+### Abrir el Proyecto en el Navegador
+Abre el archivo `index.html` en tu navegador web preferido. Puedes hacerlo directamente desde la terminal:
+```bash
+start index.html
+```
+En sistemas Unix:
+```bash
+open index.html
+```
+
+### Personalización
+Para personalizar el proyecto, puedes editar los archivos HTML, CSS y JavaScript según tus necesidades. Asegúrate de guardar los cambios y recargar la página en tu navegador para ver los resultados.
+
+### Despliegue en GitHub Pages
+Para hacer que tu proyecto esté disponible en línea, puedes usar GitHub Pages:
+1. Ve a la configuración del repositorio en GitHub.
+2. En la sección "Pages", selecciona la rama `main` y la carpeta `/root`.
+3. Guarda los cambios y tu proyecto estará disponible en `https://tu-usuario.github.io/crowdboost`.
+
+¡Y eso es todo! Ahora tienes tu proyecto de crowdfunding listo para ser utilizado y compartido.

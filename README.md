@@ -99,7 +99,6 @@ flowchart TD
 ```
 ### Leyenda de Colores
 - 🔴 Rojo: Encabezado principal
-- 🟢 Verde: Secciones principales
 - 🟡 Amarillo: Subsecciones
 - 🟣 Púrpura: Contenidos
 - 🔵 Azul: Características específicas

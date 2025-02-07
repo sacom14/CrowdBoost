@@ -44,7 +44,7 @@ h3 {
 
 /* Main Content */
 .main-content {
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -264,6 +264,11 @@ h3 {
 
 a.button {
     text-decoration: none;
+}
+
+/* progress input test */
+.input-container{
+    display: none;
 }
 
 

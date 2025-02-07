@@ -235,7 +235,6 @@ h3 {
 
 .donate-form input,
 .donate-form select {
-    width: 100%;
     padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -328,7 +327,7 @@ a.button {
     }
 
     .donate-sidebar {
-        width: 100%;
+        width: 90%;
         position: static;
         margin-bottom: 2rem;
     }
@@ -336,6 +335,12 @@ a.button {
     .hero {
         flex-direction: column;
         padding: 3rem 1.5rem;
+    }
+
+    .hero-principal-content,
+    .hero-image-content {
+        width: 90%;
+        padding-right: 5rem;
     }
 
     .hero-title {

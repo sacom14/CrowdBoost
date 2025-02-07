@@ -44,6 +44,6 @@
     color: var(--text);
     margin-top: 20px;
 }
-input {
+.progress-bar-input {
     width: 100%;
 }

@@ -1,0 +1,82 @@
+/* Header */
+.header {
+    background-color: var(--primary);
+    color: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-nav {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    margin-right: 4rem;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 1rem;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    width: 100%;
+    background-color: var(--primary);
+
+}
+
+.nav-list--visible{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-link{
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: var(--accent);
+    }
+}
+
+@media (min-width: 768px) {
+    .toggle-nav {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        margin-right: 3rem;
+        align-items: center;
+        gap: 0.5rem;
+        position: static;
+
+    }
+}

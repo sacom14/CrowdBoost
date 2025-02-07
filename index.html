@@ -11,57 +11,95 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/progress-bar.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 
 <body>
     <header class="header">
         <div class="container header-content">
-            <h1 class="logo">CrowdBoost</h1>
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="#about" class="nav-link">Sobre el Viaje</a></li>
-                    <li><a href="#progress" class="nav-link">Progreso</a></li>
-                    <li><a href="#donate" class="nav-link">Apoyar</a></li>
-                    <li><a href="#testimonials" class="nav-link">Opiniones</a></li>
-                </ul>
-            </nav>
+            <h1 class="logo" href="#">CrowdBoost</h1>
+            <button id="toggle-nav-btn" class="toggle-nav">☰</button>
+            <ul id="nav-list" class="nav-list">
+                <li><a href="#about" class="nav-link">Sobre el Viaje</a></li>
+                <li><a href="#progress" class="nav-link">Progreso</a></li>
+                <li><a href="#WithUs" class="nav-link">Roma con nosotros</a></li>
+                <li><a href="#testimonials" class="nav-link">Opiniones</a></li>
+            </ul>
         </div>
     </header>
 
-    <main class="main-content">
-        <div class="container">
+    <main class="main-container">
+        <div class="main-content">
             <section id="hero" class="hero">
-                <h2 class="hero-title">Ayúdanos a Hacer Realidad Nuestro Viaje de Final de Curso</h2>
-                <p class="hero-text">Tu apoyo nos permitirá vivir una experiencia inolvidable y cerrar nuestra etapa
-                    escolar con broche de oro.</p>
-                <a href="#donate" class="cta-button">¡Apoya Ahora!</a>
+                <div class="hero-principal-content scroll-animation-left">
+                    <h2 class="hero-title">Ayúdanos a Hacer Realidad Nuestro Viaje de Final de Curso</h2>
+                    <p class="hero-text">Tu apoyo nos permitirá vivir una experiencia inolvidable y cerrar nuestra etapa
+                        escolar con broche de oro.</p>
+                    <a href="#donate" class="button">¡Apoya Ahora!</a>
+                </div>
+                <div class="hero-image-content scroll-animation-right">
+                    <img src="/assets/img/transparent-italy-rome-ancient-ruins-history-cityscape-mystery-man-contemplating-ancient-ruins-in-colorful-citysc6607d6eb999438.73324530.webp"
+                        alt="Coliseo romano hero" class="hero-image">
+                </div>
             </section>
 
-            <div class="content-wrapper">
+            <div class="content-wrapper scroll-animation-delay-2">
                 <div class="main-sections">
                     <section id="about" class="section">
                         <h2 class="section-title">Sobre Nuestro Viaje</h2>
-                        <p>Somos la clase de 2º de Bachillerato del IES Ejemplo y queremos realizar un viaje educativo y
-                            cultural a Roma como cierre de nuestra etapa escolar.</p>
-                        <ul class="trip-details">
-                            <li>Visitar monumentos históricos y museos</li>
-                            <li>Aprender sobre la cultura italiana</li>
-                            <li>Fortalecer lazos entre compañeros</li>
-                            <li>Duración: 7 días en junio de 2025</li>
-                            <li>Fecha límite: 20 de mayo de 2025</li>
-                        </ul>
+                        <div class="about-content">
+                            <div class="about-text">
+                                <p>Somos la clase de 2º de Bachillerato del IES Ejemplo y queremos realizar un viaje
+                                    educativo y
+                                    cultural a Roma como cierre de nuestra etapa escolar.</p>
+                                <ul class="trip-details">
+                                    <li>Visitar monumentos históricos y museos</li>
+                                    <li>Aprender sobre la cultura italiana</li>
+                                    <li>Fortalecer lazos entre compañeros</li>
+                                    <li>Duración: 7 días en junio de 2025</li>
+                                    <li>Fecha límite: 20 de mayo de 2025</li>
+                                </ul>
+                            </div>
+                            <img src="/assets/img/colosseum-1014310_1280.webp" alt="Coliseo Romano" class="about-image">
+                        </div>
                     </section>
 
                     <section id="progress" class="section">
                         <h2 class="section-title">Progreso de la Campaña</h2>
-                        <div class="progress-bar">
-                            <progress id="funding-progress" value="3000" max="5000"></progress>
-                            <p class="progress-text">€3,000 recaudados de €5,000</p>
+                        <div class="progress-bar-container">
+                            <div class="progress-container">
+                                <svg class="progress-bar-svg" width="300" height="300" viewBox="0 0 200 200">
+                                    <circle class="progress-value static" cx="100" cy="100" r="90" />
+                                    <circle class="progress-value dynamic" cx="100" cy="100" r="90" />
+                                </svg>
+                            </div>
+                            <div class="input-container">
+                                <input type="number" min="0" max="100" value="100" id="progress-input">
+                            </div>
+                            <p class="progress-text">3,000 € recaudados de 5,000 €</p>
+                        </div>
+
+                    </section>
+
+                    <section id="WithUs" class="section">
+                        <h2 class="section-title">Descubre Roma con Nosotros</h2>
+                        <div class="video-container">
+                            <video controls>
+                                <source src="/assets/video/19905409-uhd_3840_2160_24fps.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                        </div>
+                        <div class="video-container">
+                            <video controls>
+                                <source src="/assets/video/9654078-uhd_4096_2160_25fps.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
                         </div>
                     </section>
 
                     <section id="testimonials" class="section">
-                        <h2 class="section-title">Lo que Dicen Sobre Nuestro Proyecto</h2>
+                        <h2 class="section-title">Lo que Dicen Sobre Nuestro Viaje</h2>
                         <div class="testimonials-wrapper">
                             <blockquote class="testimonial">
                                 <p>"Este viaje será una oportunidad única para que nuestros estudiantes apliquen lo
@@ -77,11 +115,11 @@
                     </section>
                 </div>
 
-                <aside id="donate" class="donate-sidebar">
+                <aside id="donate" class="donate-sidebar scroll-animation scroll-animation-delay-3">
                     <h2 class="section-title">Apoya Nuestro Viaje</h2>
                     <form action="/procesar-apoyo" method="post" class="donate-form">
                         <label for="amount">Cantidad a aportar:</label>
-                        <input type="number" id="amount" name="amount" min="5" step="5" required>
+                        <input type="number" id="amount" name="amount" min="1" step="5" required>
                         <label for="reward">Elige tu recompensa:</label>
                         <select id="reward" name="reward">
                             <option value="none">Sin recompensa</option>
@@ -89,7 +127,7 @@
                             <option value="souvenir">Souvenir del viaje (€50+)</option>
                             <option value="video">Video personalizado del viaje (€100+)</option>
                         </select>
-                        <button type="submit" class="donate-button">Apoyar</button>
+                        <button type="submit" class="button">Apoyar</button>
                     </form>
                 </aside>
             </div>
@@ -101,13 +139,16 @@
             <p>&copy; 2025 CrowdBoost - Campaña Viaje Final de Curso. Todos los derechos reservados.</p>
             <nav class="footer-nav">
                 <ul class="footer-nav-list">
-                    <li><a href="/privacy" class="footer-nav-link">Política de Privacidad</a></li>
-                    <li><a href="/terms" class="footer-nav-link">Términos y Condiciones</a></li>
-                    <li><a href="/contact" class="footer-nav-link">Contacto</a></li>
+                    <li><a href="#" class="footer-nav-link">Política de Privacidad</a></li>
+                    <li><a href="#" class="footer-nav-link">Términos y Condiciones</a></li>
+                    <li><a href="#" class="footer-nav-link">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </footer>
 </body>
+<script src="js/script.js"></script>
+<script src="js/progress-bar.js"></script>
+<script src="js/header.js"></script>
 
 </html>

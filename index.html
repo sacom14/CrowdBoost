@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/progress-bar.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/countdown.css">
+    <link rel="stylesheet" href="css/donate-form.css">
 </head>
 
 <body>
@@ -61,6 +63,12 @@
                                     <li>Fecha límite: 20 de mayo de 2025</li>
                                 </ul>
                             </div>
+                            <div class="countdown">
+                                <div id="countdown-timer">
+                                    <h3 class="countdown-title">Tiempo Restante para la Recaudación</h3>
+                                    <p id="countdown"></p>
+                                </div>
+                            </div>
                             <img src="/assets/img/colosseum-1014310_1280.webp" alt="Coliseo Romano" class="about-image">
                         </div>
                     </section>
@@ -75,9 +83,10 @@
                                 </svg>
                             </div>
                             <div class="input-container">
-                                <input class="progress-bar-input" type="number" min="0" max="100" value="100" id="progress-input">
+                                <input class="progress-bar-input" type="number" min="0" max="100" value="100"
+                                    id="progress-input">
                             </div>
-                            <p class="progress-text">3,000 € recaudados de 5,000 €</p>
+                            <p id="progress-text">3,000 € recaudados de 5,000 €</p>
                         </div>
 
                     </section>
@@ -117,18 +126,42 @@
 
                 <aside id="donate" class="donate-sidebar scroll-animation scroll-animation-delay-3">
                     <h2 class="section-title">Apoya Nuestro Viaje</h2>
-                    <form action="/procesar-apoyo" method="post" class="donate-form">
+                    <form id="donate-form" action="/procesar-apoyo" method="post" class="donate-form">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
                         <label for="amount">Cantidad a aportar:</label>
-                        <input type="number" id="amount" name="amount" min="1" step="5" required>
+                        <input type="number" id="amount" name="amount" min="1" required>
+
                         <label for="reward">Elige tu recompensa:</label>
                         <select id="reward" name="reward">
                             <option value="none">Sin recompensa</option>
-                            <option value="postcard">Postal desde Roma (€20+)</option>
-                            <option value="souvenir">Souvenir del viaje (€50+)</option>
-                            <option value="video">Video personalizado del viaje (€100+)</option>
+                            <option value="video">Video personalizado del viaje (€50+)</option>
+                            <option value="postcard">Postal desde Roma (€10+)</option>
+                            <option value="souvenir">Souvenir del viaje (€20+)</option>
                         </select>
                         <button type="submit" class="button">Apoyar</button>
                     </form>
+                    <!-- Modal for bank details -->
+                    <div id="bank-details-modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Introduce tus datos bancarios</h2>
+                            <form id="bank-details-form">
+                                <label for="card-number">Número de tarjeta</label>
+                                <input type="text" id="card-number" name="card-number" required>
+                                <label for="expiry-date">Fecha de expiración</label>
+                                <input type="text" id="expiry-date" name="expiry-date" required>
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" required>
+                                <button type="submit" class="button">Pagar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Toast notification -->
+                    <div id="toast" class="toast">Se ha realizado el pago correctamente</div>
                 </aside>
             </div>
         </div>
@@ -150,5 +183,7 @@
 <script src="js/script.js"></script>
 <script src="js/progress-bar.js"></script>
 <script src="js/header.js"></script>
+<script src="js/countdown.js"></script>
+<script src="js/donate-form.js"></script>
 
 </html>
